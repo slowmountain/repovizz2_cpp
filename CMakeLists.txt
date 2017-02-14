@@ -1,11 +1,12 @@
+#TODO make this deployable on other computers
 #set(CMAKE_VERBOSE_MAKEFILE on)
 cmake_minimum_required(VERSION 3.6)
 project(repovizz2_client)
 
 set(CMAKE_CXX_STANDARD 11)
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp repovizz2_client.cpp)
 
-find_package(Boost COMPONENTS system REQUIRED)
+find_package(Boost COMPONENTS system thread chrono REQUIRED)
 
 set( OPENSSL_ROOT_DIR "/usr/local/opt/openssl")
 find_package(OpenSSL REQUIRED)
@@ -21,4 +22,4 @@ add_executable(repovizz2_client ${SOURCE_FILES})
 
 include_directories(/Users/panpap/Documents/casablanca/Release/include/ /usr/local/opt/openssl/include)
 
-target_link_libraries(repovizz2_client ${OPENSSL_LIBRARIES} ${Boost_SYSTEM_LIBRARY} ${CPP_REST})
+target_link_libraries(repovizz2_client ${OPENSSL_LIBRARIES} ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_CHRONO_LIBRARY} ${CPP_REST})
