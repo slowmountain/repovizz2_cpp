@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.6)
 project(repovizz2_client)
 
 set(CMAKE_CXX_STANDARD 11)
-set(SOURCE_FILES main.cpp repovizz2_client.cpp)
+set(SOURCE_FILES main.cpp oauth2_session.cpp oauth2_session.h repovizz2_client.cpp repovizz2_client.h)
 
 find_package(Boost COMPONENTS system thread chrono REQUIRED)
 
