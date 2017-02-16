@@ -86,8 +86,8 @@ bool oauth2_session::is_enabled() const
 void oauth2_session::open_browser_auth()
 {
     auto auth_uri(m_oauth2_config.build_authorization_uri(true));
-    ucout << "Opening browser in URI:" << std::endl;
-    ucout << auth_uri << std::endl;
+    //ucout << "Opening browser in URI:" << std::endl;
+    //ucout << auth_uri << std::endl;
     open_browser(auth_uri);
 }
 
@@ -95,7 +95,7 @@ void oauth2_session::authorize()
 {
     if (is_enabled())
     {
-        ucout << "Running " << m_name.c_str() << " session..." << std::endl;
+        //ucout << "Running " << m_name.c_str() << " session..." << std::endl;
 
         if (!m_oauth2_config.token().is_valid_access_token())
         {
@@ -112,7 +112,7 @@ void oauth2_session::authorize()
     }
     else
     {
-        ucout << "Skipped " << m_name.c_str() << " session sample because app key or secret is empty. Please see instructions." << std::endl;
+        //ucout << "Skipped " << m_name.c_str() << " session sample because app key or secret is empty. Please see instructions." << std::endl;
     }
 }
 

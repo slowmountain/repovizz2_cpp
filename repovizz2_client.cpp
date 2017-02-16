@@ -16,9 +16,19 @@ repovizz2_client::repovizz2_client(utility::string_t client_id, utility::string_
             m_oauth2_config.set_scope(U("basic"));
         }
 
-void repovizz2_client::get(utility::string_t query)
+value repovizz2_client::get(utility::string_t query)
 {
-    ucout << "Information: " << api.request(methods::GET, query).get().extract_json().get() << std::endl;
+    return api.request(methods::GET, query).get().extract_json().get();
+}
+
+value repovizz2_client::get_myself()
+{
+    return get(U("/api/v1.0/user"));
+}
+
+value repovizz2_client::get_datapack(utility::string_t datapack_id)
+{
+    return get(U("/api/v1.0/datapacks/")+datapack_id);
 }
 
 void repovizz2_client::post(utility::string_t query)
