@@ -35,3 +35,5 @@ void repovizz2_client::post(utility::string_t query)
 {
     ucout << "Yeah, not ready yet." << std::endl;
 }
+
+//TODO: add and test POST requests
