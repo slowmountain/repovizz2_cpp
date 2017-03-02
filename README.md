@@ -4,9 +4,9 @@ C++ client library for Universitat Pompeu Fabra's online multimodal repository [
 Allows users to write clients in order to upload, retrieve, and edit datapacks using the repovizz2 API ([documentation](github.com/repovizz/repovizz2doc)).
 
 ## Installation
-This client library is based on Microsoft's [CPPRESTSDK](https://github.com/microsoft/cpprestsdk). First install CPPRESTSDK and its dependencies (Boost and OpenSSL) following [this guide](https://github.com/Microsoft/cpprestsdk/wiki).
+This client library is based on Microsoft's [cpprestsdk](https://github.com/microsoft/cpprestsdk). First install cpprestsdk and its dependencies (Boost and OpenSSL) following [this guide](https://github.com/Microsoft/cpprestsdk/wiki).
 
-We recommend that you use [cmake](https://cmake.org/) to build this library; in order to do that you'll need to edit the `CMakeLists.txt` file and adapt the paths to Boost, OpenSSL and CPPRESTSDK.
+We recommend that you use [cmake](https://cmake.org/) to build this library; in order to do that you'll need to edit the `CMakeLists.txt` file and adapt the paths for Boost, OpenSSL and CPPRESTSDK.
 
 ## Usage
 `main.cpp` demonstrates a simple use case 
