@@ -1,0 +1,33 @@
+{
+    "info": {
+        "keywords": [
+            "test"
+        ],
+        "description": "Test datapack for the C++ client",
+        "name": "cpp_test_datapack",
+        "author": "panpap"
+    },
+    "children": [{
+        "class": "container",
+        "name": "Trained models",
+        "text": "",
+        "children": [{
+            "class": "data",
+            "name": "Model_1",
+            "text": "Example of a trained classifier model using the rapidmix-api",
+            "link": "trained_model.json",
+          	"mime": "text/plain; charset=us-ascii"
+        }]
+    }, {
+        "class": "container",
+        "name": "Training datasets",
+        "text": "",
+        "children": [{
+            "class": "data",
+            "name": "trainingData",
+            "text": "Example of a training dataset using the rapidmix-api",
+            "link": "training_data.json",
+          	"mime": "text/plain; charset=us-ascii"
+        }]
+    }]
+}
