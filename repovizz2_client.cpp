@@ -6,11 +6,11 @@
 
 repovizz2_client::repovizz2_client(utility::string_t client_id, utility::string_t client_secret, utility::string_t redirect_uri = U("localhost:50009")) :
         oauth2_session(U("repovizz2"),
-        U("http://localhost:8080/"),
+        U("https://repovizz2.upf.edu/"),
         client_id,
         client_secret,
-        U("http://localhost:8080/oauth/authorize"),
-        U("http://localhost:8080/oauth/token"),
+        U("https://repovizz2.upf.edu/oauth/authorize"),
+        U("https://repovizz2.upf.edu/oauth/token"),
         redirect_uri)
         {
             m_oauth2_config.set_scope(U("basic"));
